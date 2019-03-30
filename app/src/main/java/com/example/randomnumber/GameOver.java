@@ -14,7 +14,7 @@ import java.util.List;
 
 public class GameOver extends AppCompatActivity {
     private Button btReset;
-    private TextView  tv2Cor, tv2Inc;
+    private TextView tv2Cor, tv2Inc;
 
 
     @Override
@@ -25,15 +25,15 @@ public class GameOver extends AppCompatActivity {
 
 
         tv2Cor = findViewById(R.id.tv2Correct);
-        tv2Inc= findViewById(R.id.tv2Incorrect);
+        tv2Inc = findViewById(R.id.tv2Incorrect);
         btReset = findViewById(R.id.btnReset);
 
 
         Intent intent = getIntent();
         String str = intent.getStringExtra("message");
         String str2 = intent.getStringExtra("message2");
-        tv2Cor.setText("Correct: "+str);
-        tv2Inc.setText("Incorrect: "+str2);
+        tv2Cor.setText("Correct: " + str);
+        tv2Inc.setText("Incorrect: " + str2);
 
         btReset.setOnClickListener(new View.OnClickListener() {
             @Override
